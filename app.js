@@ -104,7 +104,7 @@ function currentSlideLightBox(n) {
   showSlidesLightBox((slideIndexLightBox = n));
 }
 
-slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Thumbnail image controls
