@@ -1,19 +1,4 @@
-// Increase and decrease quantity
-jQuery(document).ready(($) => {
-  $(".container-items").on("click", ".plus", function (e) {
-    let $input = $(this).prev("input.quantity");
-    let val = parseInt($input.val());
-    $input.val(val + 1).change();
-  });
 
-  $(".container-items").on("click", ".minus", function (e) {
-    let $input = $(this).next("input.quantity");
-    const val = parseInt($input.val());
-    if (val > 0) {
-      $input.val(val - 1).change();
-    }
-  });
-});
 
 const itemPrice = 125;
 const deleteCartItems = document.getElementById("delete-items");
@@ -23,8 +8,17 @@ const cartEmpty = document.querySelector(".cart-empty");
 const priceQuantity = document.querySelector(".price-quantity");
 const total = document.querySelector(".total");
 const headerItems = document.querySelector(".header-items");
+const quantity = document.querySelector(".quantity");
+function plusQuantity(){
+  quantity.value = Number(quantity.value) + 1;
+}
 
-// Add items to cart
+function minusQuantity(){
+  if(quantity.value != 0){
+    quantity.value = Number(quantity.value) - 1;
+  }
+}
+
 function addToCart() {
   const inputValue = document.querySelector("input.quantity").value;
   if (inputValue != 0) {
@@ -91,7 +85,7 @@ function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
-slideIndexLightBox = 1;
+let slideIndexLightBox = 1;
 showSlidesLightBox(slideIndexLightBox);
 
 // Next/previous controls
@@ -104,7 +98,7 @@ function currentSlideLightBox(n) {
   showSlidesLightBox((slideIndexLightBox = n));
 }
 
-slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Thumbnail image controls

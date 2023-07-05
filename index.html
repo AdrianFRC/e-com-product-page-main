@@ -162,9 +162,9 @@
           </div>
           <form class="container-items">
             <div class="container-quantity">
-              <input type="button" value="-" class="minus" />
+              <input type="button" value="-" class="minus" onclick="minusQuantity()"/>
               <input type="text" value="0" class="quantity" />
-              <input type="button" value="+" class="plus" />
+              <input type="button" value="+" class="plus" onclick="plusQuantity()"/>
             </div>
             <div class="container-add">
               <button class="add-item" type="button" onclick="addToCart()">
@@ -291,9 +291,5 @@
       >. Coded by <a href="#">AdrianFRC</a>.
     </div>
   </body>
-  <script
-    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-    type="text/javascript"
-  ></script>
   <script type="text/javascript" src="app.js"></script>
 </html>
