@@ -91,7 +91,7 @@ function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
-let slideIndexLightBox = 1;
+slideIndexLightBox = 1;
 showSlidesLightBox(slideIndexLightBox);
 
 // Next/previous controls
@@ -104,7 +104,7 @@ function currentSlideLightBox(n) {
   showSlidesLightBox((slideIndexLightBox = n));
 }
 
-let slideIndex = 1;
+slideIndex = 1;
 showSlides(slideIndex);
 
 // Thumbnail image controls
