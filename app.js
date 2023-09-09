@@ -9,6 +9,7 @@ const priceQuantity = document.querySelector(".price-quantity");
 const total = document.querySelector(".total");
 const headerItems = document.querySelector(".header-items");
 const quantity = document.querySelector(".quantity");
+
 function plusQuantity(){
   quantity.value = Number(quantity.value) + 1;
 }
